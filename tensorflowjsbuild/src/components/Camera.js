@@ -154,7 +154,7 @@ function Camera() {
                 <span>
                   <h2>
                     {classNames[biggerValue.index]} :
-                    {" " + biggerValue.max.toFixed(4) * 100}%
+                    {" " + (biggerValue.max * 100).toFixed(2)}%
                   </h2>
                 </span>
               )}
