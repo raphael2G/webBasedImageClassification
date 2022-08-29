@@ -22,8 +22,10 @@ function Inputs() {
 
   return (
     <div className="inputContainer">
-      <h1>Name your Classes</h1>
-      <h3>Detected {classNames.length} classes</h3>
+      <h1 style={{ marginBottom: "5px" }}>Name your Classes</h1>
+      <h3 style={{ marginBottom: "5px" }}>
+        Detected {classNames.length} classes
+      </h3>
       <div className="textfieldContainers">
         {classNames.map((index, item) => (
           <TextField
@@ -39,6 +41,7 @@ function Inputs() {
         onClick={() => sendComplete()}
         id="submitButton"
         variant="contained"
+        style={{ width: "100%", maxWidth: "100px", marginTop: "10px" }}
       >
         Next
       </Button>

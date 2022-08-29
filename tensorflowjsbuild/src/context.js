@@ -7,6 +7,17 @@ export const StateContext = ({ children }) => {
   const [layersCount, updateLayersCount] = useState(0);
   const [ready, updateReady] = useState(false);
   const [showClassNameInput, updateClassNameInput] = useState(false);
+  const [result, newResult] = useState();
+  const [preset, updatepreset] = useState(false);
+
+  const updatePresetFunction = () => {
+    updatepreset(true);
+    console.log("changed");
+  };
+
+  const updateResult = (data) => {
+    newResult(data);
+  };
 
   const updateClassNameInputFunction = () => {
     if (showClassNameInput) updateClassNameInput(false);
@@ -56,6 +67,10 @@ export const StateContext = ({ children }) => {
         updateClassNamesFunction,
         updateClassNameInputFunction,
         showClassNameInput,
+        result,
+        updateResult,
+        preset,
+        updatePresetFunction,
       }}
     >
       {children}
